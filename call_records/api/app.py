@@ -2,6 +2,7 @@ from flask import Flask
 from flask import Blueprint
 from flask_restful import Api
 from flask_script import Manager
+from api.call_records.views import HealthCheckView
 
 
 def create_app():
@@ -13,6 +14,7 @@ def create_app():
 def register_blueprints(app):
     blueprint = Blueprint('api', __name__)
     api = Api(blueprint)
+    api.add_resource(HealthCheckView, '/health')
     app.register_blueprint(blueprint, url_prefix='/api')
 
 
