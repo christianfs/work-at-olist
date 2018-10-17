@@ -1,0 +1,13 @@
+flask
+flask_migrate
+flask_script
+flask_sqlalchemy==2.1
+flask_marshmallow
+flask-restful
+flask-restful-swagger
+flask-cors
+marshmallow-sqlalchemy
+psycopg2
+python-dotenv
+pytest
+pytest-cov
