@@ -13,6 +13,7 @@ def create_app():
 def register_blueprints(app):
     blueprint = Blueprint('api', __name__)
     api = Api(blueprint)
+    app.register_blueprint(blueprint, url_prefix='/api')
 
 
 if __name__ == "__main__":
